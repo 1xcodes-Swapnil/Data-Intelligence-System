@@ -7,25 +7,32 @@ def calculate_score(
     remaining_budget: float
 ) -> float:
     """
-    Calculates how valuable it is to collect data from a source.
+    Stage-2 decision policy for autonomous data selection.
 
-    All inputs must be normalized between 0 and 1.
-    Higher score = higher priority.
+    Inputs:
+    - freshness, reliability, cost ∈ [0, 1]
+    - remaining_budget ∈ [0, total_budget]
+
+    Output:
+    - Base utility score (learning & confidence handled by agent)
     """
 
-    # No budget → no collection
+    # 🔹 No budget left → no action
     if remaining_budget <= 0:
         return 0.0
 
-    # Core weighted scoring logic
-    score = (
-        (0.4 * freshness) +
-        (0.4 * reliability) -
-        (0.2 * cost)
+    # 🔹 Core utility (interpretable & explainable)
+    base_score = (
+        (0.45 * freshness) +        # how recent the data is
+        (0.45 * reliability) -      # how trustworthy the source is
+        (0.25 * cost)               # how expensive it is
     )
 
-    # Budget awareness: become conservative as budget drops
-    score = score * remaining_budget
+    # 🔹 Budget sensitivity (graceful decay, not hard stop)
+    # Agent becomes conservative as budget drops
+    budget_factor = min(1.0, remaining_budget)
 
-    # Ensure score never goes negative
+    score = base_score * budget_factor
+
+    # 🔹 Never return negative (agent handles penalties separately)
     return max(score, 0.0)
