@@ -1,6 +1,6 @@
 # datacollectionAIAgent
 
-TETRA LOGIC , Echleon 2.0 , requirement.txt in master branch
+TETRA LOGIC , Echleon 2.0 , requirement.txt 
 AI-Powered Market Intelligence & Autonomous Data Collection
 
 An advanced AI-driven silver price prediction platform combining:
