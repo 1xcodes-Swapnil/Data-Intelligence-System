@@ -4,7 +4,7 @@ event:  Echelon 2.0
 
   Setup Instructions
 1. Clone the Repository
-git clone https://github.com/your-username/silver-ai-system.git
+git clone /https://github.com/1xcodes-Swapnil/datacollectionAIAgent
 cd silver-ai-system
 
 2. Create Virtual Environment
