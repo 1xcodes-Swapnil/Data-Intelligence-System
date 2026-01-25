@@ -1,66 +1,74 @@
-# datacollectionAIAgent
+# Echelon-2.0
+Team : TETRA LOGIC
+event:  Echelon 2.0
 
-TETRA LOGIC , Echleon 2.0 , requirement.txt 
-AI-Powered Market Intelligence & Autonomous Data Collection
+  Setup Instructions
+1. Clone the Repository
+git clone https://github.com/your-username/silver-ai-system.git
+cd silver-ai-system
 
-An advanced AI-driven silver price prediction platform combining:
+2. Create Virtual Environment
+On Windows:
+python -m venv venv
+venv\Scripts\activate
 
-Multi-source real-time data ingestion
+On Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
 
-Autonomous source selection via Reinforcement Learning
+3. Install Dependencies
+pip install -r requirements.txt
 
-Market impact analysis
+4. Configure API Keys
 
-News sentiment intelligence
+Create a .env file in the root directory and add:
 
-Statistical forecasting (ARIMA)
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
+GNEWS_API_KEY=your_gnews_api_key
+Or in config.py:
+ALPHA_KEY = "your_alpha_vantage_key"
+GNEWS_KEY = "your_gnews_api_key"
 
-FastAPI backend for real-time access
+5. Ensure Intelligence Modules Are Ready
 
-🚀 Key Features
+Make sure these files exist:
+intelligence/sentiment.py
+intelligence/market.py
 
-✅ Real-time silver price ingestion
-✅ Autonomous data source selection (Multi-Armed Bandit)
-✅ Market Impact Intelligence
-✅ News-based Sentiment Analysis
-✅ AI-based decision explainability
-✅ Budget-aware data collection
-✅ ARIMA-based price forecasting
-✅ API rate optimization & caching
-✅ FastAPI REST interface
+And your utils/price_fetcher.py is properly fetching prices.
 
-🧠 System Architecture
-User Request
-     ↓
-FastAPI Backend
-     ↓
-SilverMarketEnvironment
-     ↓
-┌───────────────────────────────┐
-│   DataCollectionAgent (AI)    │
-│  ─ Rule Engine                │
-│  ─ RL (Bandit Learning)       │
-│  ─ Sentiment Awareness        │
-│  ─ Budget Control             │
-└───────────────────────────────┘
-     ↓
-Silver Data Sources
-(Yahoo, AlphaVantage, etc.)
-     ↓
-Sentiment + Market Intelligence
-     ↓
-ARIMA Prediction Engine
-     ↓
-Final Price Prediction API
+6. Run the Backend Server
+uvicorn main:app --reload
 
-🛠 Tech Stack
-Layer	Technology
-Backend API	FastAPI
-AI Agent	Custom RL (Multi-Armed Bandit)
-Forecasting	ARIMA
-Market Data	Yahoo Finance, Alpha Vantage
-Sentiment	News-based NLP
-Market Impact	Custom Volatility Analyzer
-Logging	Python Logging
-Deployment	Uvicorn
-Language	Python 3.9+ 
+7. Frontend
+1. Navigate to Frontend Directory
+cd silver-pulse-dashboard
+
+2. Install Frontend Dependencies
+npm install
+
+3. Start Development Server
+npm run dev
+
+
+You should see:
+
+VITE v5.x ready
+Local: http://localhost:8080/
+
+4. Access Dashboard
+
+Open in browser:
+http://localhost:8080/
+
+This will load the Silver Pulse AI Dashboard UI.
+
+ 5. Connect Frontend with Backend
+
+Ensure backend is running:
+uvicorn main:app --reload
+
+
+Update your frontend API base URL if needed:
+http://localhost:8000/silver/predict   
+
