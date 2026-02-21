@@ -1,5 +1,0 @@
-[2026-01-24 16:52:52] [INFO] === AI Logging System Initialized ===
-[2026-01-24 16:52:52] [INFO] ===== BACKEND EXECUTION STARTED =====
-[2026-01-24 16:52:52] [INFO] ENV | Timestep: 0 | Info: Initialized environment with 3 sources
-[2026-01-24 16:52:53] [INFO] PREDICTION | Next Price: 24.4 | Trend: stable | Confidence: 0.0195
-[2026-01-24 16:52:53] [INFO] ===== BACKEND EXECUTION FINISHED =====
