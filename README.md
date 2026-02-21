@@ -1,6 +1,4 @@
-# Echelon-2.0
-Team : TETRA LOGIC
-event:  Echelon 2.0
+
 
   Setup Instructions
 1. Clone the Repository
