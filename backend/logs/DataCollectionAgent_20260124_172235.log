@@ -1,0 +1,6 @@
+[2026-01-24 17:22:35] [INFO] === AI Logging System Initialized ===
+[2026-01-24 17:22:35] [INFO] DECISION | Selected Source: spot_silver | Score: 1.1963 | Budget Remaining: 5.00
+[2026-01-24 17:22:35] [INFO] EXPLANATION | Source 'spot_silver' selected due to high freshness (0.95), reliability (0.95), and acceptable cost (0.30). Source 'silver_futures' deprioritized due to lower freshness, lower reliability, higher cost.
+[2026-01-24 17:22:35] [INFO] BUDGET | Old: 5.00 -> New: 4.70
+[2026-01-24 17:22:35] [INFO] REWARD | Source: spot_silver | Reward: -0.2825
+[2026-01-24 17:22:35] [INFO] LEARNING | Source: spot_silver | Old Value: 0.0000 -> New Value: -0.2825

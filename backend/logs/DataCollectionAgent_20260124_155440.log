@@ -1,0 +1,5 @@
+[2026-01-24 15:54:40] [INFO] === AI Logging System Initialized ===
+[2026-01-24 15:54:40] [INFO] DECISION | Selected Source: ScrapedNews | Score: 2.9000 | Budget Remaining: 5.00
+[2026-01-24 15:54:40] [INFO] BUDGET | Old: 5.00 -> New: 4.50
+[2026-01-24 15:54:40] [INFO] REWARD | Source: ScrapedNews | Reward: 0.1364
+[2026-01-24 15:54:40] [INFO] LEARNING | Source: ScrapedNews | Old Value: 0.0000 -> New Value: 0.1364
