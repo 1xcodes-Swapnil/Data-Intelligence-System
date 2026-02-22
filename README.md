@@ -1,74 +1,146 @@
-# Echelon-2.0
-Team : TETRA LOGIC
-event:  Echelon 2.0
+Data Intelligence System 
+AI-Driven Market & Sentiment Intelligence Platform
 
-  Setup Instructions
-1. Clone the Repository
-git clone /https://github.com/1xcodes-Swapnil/datacollectionAIAgent
-cd silver-ai-system
+Event: Echelon 2.0 Hackathon
 
-2. Create Virtual Environment
-On Windows:
-python -m venv venv
-venv\Scripts\activate
+Overview
+The Data Intelligence System is an AI-powered platform that continuously collects market and news data, performs sentiment and pricing analysis, and delivers actionable insights through an intelligent backend agent and a real-time analytics dashboard.
+The system simulates an autonomous data intelligence agent capable of monitoring multiple information sources and generating decision-ready outputs.
+The system combines:
 
-On Mac/Linux:
-python3 -m venv venv
-source venv/bin/activate
+📊 Real-time market price monitoring
+📰 News sentiment intelligence
+🤖 Automated data collection agent
+⚡ FastAPI-based AI backend
+🖥️ Interactive analytics dashboard
+🔄 Modular intelligence pipeline
+📈 Decision visualization panels
 
-3. Install Dependencies
-pip install -r requirements.txt
+-------------------------------------------------------------
+Project Architecture:
+DATA_INTELLIGENCE_AGENT
+│
+├── backend/      → FastAPI AI data agent
+├── frontend/     → React + Vite analytics dashboard
+└── README.md
 
-4. Configure API Keys
+Backend
+  -> FastAPI server
+  -> Data collection agents
+  -> Market intelligence modules
+  -> Sentiment analysis pipeline
 
-Create a .env file in the root directory and add:
+Frontend
+  -> React + TypeScript dashboard
+  -> Real-time visualization
+  -> Agent activity monitoring
 
-ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
-GNEWS_API_KEY=your_gnews_api_key
-Or in config.py:
-ALPHA_KEY = "your_alpha_vantage_key"
-GNEWS_KEY = "your_gnews_api_key"
+System Architecture:
+  ![System Architecture](docs/architecture.png)
 
-5. Ensure Intelligence Modules Are Ready
+System Flow:
+  ![System Flow](docs/System_flow.png)
+------------------------------------------------------------------------------
+⚙️ Tech Stack
+Backend
+  ->  Python
+  ->  Reinforcement Learning (Multi-Armed Bandit Learning)
+  ->  ARIMA (Time-Series Forecasting)
+  ->  FastAPI
+  ->  Uvicorn
+  ->  REST APIs
+  ->  JSON/CSV data storage
+  ->  External Data APIs (Alpha Vantage, GNews)
+Frontend
+  ->  React
+  ->  TypeScript
+  ->  Vite
+  ->  Tailwind CSS
+------------------------------------------------------------------------------
+🧩 Features
 
-Make sure these files exist:
-intelligence/sentiment.py
-intelligence/market.py
+✅ Automated data collection agent
+✅ Market price monitoring
+✅ News sentiment analysis
+✅ Decision intelligence pipeline
+✅ Real-time dashboard visualization
+✅ Modular AI architecture
+-------------------------------------------------------------------------------
+🛠️ Setup Instructions
 
-And your utils/price_fetcher.py is properly fetching prices.
+1️⃣ Clone Repository
+    git clone https://github.com/1xcodes-Swapnil/Data-Intelligence-System.git
+    cd DATA_INTELLIGENCE_AGENT
 
-6. Run the Backend Server
-uvicorn main:app --reload
+🔹 Backend Setup
+2️⃣ Create Virtual Environment
+    Windows
+      python -m venv venv
+      venv\Scripts\activate
 
-7. Frontend
-1. Navigate to Frontend Directory
-cd silver-pulse-dashboard
+    Mac/Linux
+      python3 -m venv venv
+      source venv/bin/activate
 
-2. Install Frontend Dependencies
-npm install
+3️⃣ Install Dependencies
+    pip install -r requirements.txt
 
-3. Start Development Server
-npm run dev
+4️⃣ Configure API Keys
+    Create a .env file in the project root:
+      ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
+      GNEWS_API_KEY=your_gnews_api_key
 
+    Alternatively configure inside config.py:
+      ALPHA_KEY = "your_alpha_vantage_key"
+      GNEWS_KEY = "your_gnews_api_key"
 
-You should see:
+5️⃣ Verify Intelligence Modules
+    Ensure the following modules exist:
+      -> intelligence/sentiment.py
+      -> intelligence/market.py
+      -> utils/price_fetcher.py
 
-VITE v5.x ready
-Local: http://localhost:8080/
+6️⃣ Run Backend Server
+    uvicorn main:app --reload
 
-4. Access Dashboard
+  Backend runs at:
+    http://localhost:8000
 
-Open in browser:
-http://localhost:8080/
+🔹 Frontend Setup
+7️⃣ Navigate to Frontend
+    cd frontend
 
-This will load the Silver Pulse AI Dashboard UI.
+8️⃣ Install Dependencies
+    npm install
 
- 5. Connect Frontend with Backend
+9️⃣ Start Development Server
+    npm run dev
+    
+    You should see:
+    VITE ready
+    Local: http://localhost:8080/
 
-Ensure backend is running:
-uvicorn main:app --reload
+🔗 Connect Frontend with Backend
 
+  Ensure backend is running:
+    uvicorn main:app --reload
 
-Update your frontend API base URL if needed:
-http://localhost:8000/silver/predict   
+  Frontend API endpoint:
+    http://localhost:8000/silver/predict
 
+  Update the API base URL inside frontend configuration if required.
+
+📊 Dashboard Access
+
+  Open in browser:
+    http://localhost:8080/
+
+This launches the Data Intelligence Dashboard UI.
+------------------------------------------------------------------------------
+
+Future Improvements
+
+=>  Multi-agent orchestration
+=>  Real-time streaming pipelines
+=>  ML model optimization
+=>  Cloud deployment (Docker + AWS)
