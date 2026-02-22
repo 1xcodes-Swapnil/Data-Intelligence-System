@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 Data Intelligence System 
 AI-Driven Market & Sentiment Intelligence Platform
 =======
-
->>>>>>> f9be911d59a71de8e1f153974d73beab5662f36b
-
 Event: Echelon 2.0 Hackathon
 
 Overview
