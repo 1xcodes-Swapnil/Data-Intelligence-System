@@ -138,9 +138,9 @@ Frontend
 This launches the Data Intelligence Dashboard UI.
 ------------------------------------------------------------------------------
 CONTRIBUTORS :
-SWAPNIL MUKHERJEE
-HRIDAY SONAWANE
-MINAL DUSANE
+SWAPNIL MUKHERJEE ,
+HRIDAY SONAWANE , 
+MINAL DUSANE ,
 ASTHA PATIL
 
 
