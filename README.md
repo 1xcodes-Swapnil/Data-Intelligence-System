@@ -1,152 +1,260 @@
-Data Intelligence System 
-AI-Driven Market & Sentiment Intelligence Platform
-=======
-Event: Echelon 2.0 Hackathon
+# 📊 Data Intelligence System
 
-Overview
-The Data Intelligence System is an AI-powered platform that continuously collects market and news data, performs sentiment and pricing analysis, and delivers actionable insights through an intelligent backend agent and a real-time analytics dashboard.
-The system simulates an autonomous data intelligence agent capable of monitoring multiple information sources and generating decision-ready outputs.
-The system combines:
+### Market Intelligence • Sentiment Analysis • Price Forecasting
 
-📊 Real-time market price monitoring
-📰 News sentiment intelligence
-🤖 Automated data collection agent
-⚡ FastAPI-based AI backend
-🖥️ Interactive analytics dashboard
-🔄 Modular intelligence pipeline
-📈 Decision visualization panels
+<p align="center">
+  <strong>AI-driven intelligence for understanding market signals from prices and financial news.</strong>
+</p>
 
--------------------------------------------------------------
-Project Architecture:
-DATA_INTELLIGENCE_AGENT
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+</p>
+
+---
+
+## ⚡ What is it?
+
+**Data Intelligence System** is an AI-powered platform that brings together **market data, financial news, sentiment analysis, and price forecasting** into a single intelligence pipeline.
+
+Instead of looking at market prices and news separately, the system processes these signals together and presents the resulting intelligence through an interactive dashboard.
+
+```text
+Market Data ───────┐
+                   │
+                   ▼
+              ┌───────────┐
+News Data ───►│Intelligence│
+              │  Pipeline  │
+              └─────┬─────┘
+                    │
+        ┌───────────┼───────────┐
+        ▼           ▼           ▼
+    Sentiment    Forecasting  Decisions
+        │           │           │
+        └───────────┼───────────┘
+                    ▼
+             Analytics Dashboard
+```
+
+---
+
+## 🧠 Intelligence Pipeline
+
+```text
+┌────────────────────┐
+│  External Sources  │
+│                    │
+│ Alpha Vantage      │
+│ GNews              │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  Data Collection   │
+│      Agent         │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────────────────┐
+│      Intelligence Layer        │
+│                                │
+│  Market Analysis               │
+│  Sentiment Analysis            │
+│  ARIMA Forecasting             │
+│  Multi-Armed Bandit Learning   │
+└───────────────┬────────────────┘
+                │
+                ▼
+┌────────────────────────┐
+│     FastAPI Backend    │
+└────────────┬───────────┘
+             │
+             ▼
+┌────────────────────────┐
+│   React Dashboard      │
+│                        │
+│  Market │ Sentiment    │
+│  Forecasts │ Signals   │
+└────────────────────────┘
+```
+
+---
+
+## ✨ Core Capabilities
+
+|     | Capability                | Description                              |
+| --- | ------------------------- | ---------------------------------------- |
+| 📊  | **Market Monitoring**     | Tracks market price data                 |
+| 📰  | **News Intelligence**     | Collects financial news                  |
+| 🧠  | **Sentiment Analysis**    | Extracts sentiment signals from news     |
+| 📈  | **Price Forecasting**     | Uses ARIMA for time-series prediction    |
+| 🎯  | **Decision Intelligence** | Uses Multi-Armed Bandit learning         |
+| 🤖  | **Data Agent**            | Automates data collection and processing |
+| 🖥️ | **Analytics Dashboard**   | Visualizes intelligence in real time     |
+
+---
+
+## 🏗️ Architecture
+
+![System Architecture](docs/architecture.png)
+
+### System Flow
+
+![System Flow](docs/System_flow.png)
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+`Python` · `FastAPI` · `Uvicorn` · `ARIMA` · `Multi-Armed Bandit`
+
+### Frontend
+
+`React` · `TypeScript` · `Vite` · `Tailwind CSS`
+
+### Data Sources
+
+`Alpha Vantage` · `GNews API`
+
+### Storage
+
+`JSON` · `CSV`
+
+---
+
+## 📁 Project Structure
+
+```text
+DATA_INTELLIGENCE_AGENT/
 │
-├── backend/      → FastAPI AI data agent
-├── frontend/     → React + Vite analytics dashboard
+├── backend/
+│   ├── intelligence/
+│   │   ├── sentiment.py
+│   │   └── market.py
+│   │
+│   ├── utils/
+│   │   └── price_fetcher.py
+│   │
+│   └── main.py
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── docs/
+│   ├── architecture.png
+│   └── System_flow.png
+│
+├── requirements.txt
 └── README.md
+```
 
-Backend
-  -> FastAPI server
-  -> Data collection agents
-  -> Market intelligence modules
-  -> Sentiment analysis pipeline
+---
 
-Frontend
-  -> React + TypeScript dashboard
-  -> Real-time visualization
-  -> Agent activity monitoring
+## 🚀 Getting Started
 
-System Architecture:
-  ![System Architecture](docs/architecture.png)
+### 1. Clone
 
-System Flow:
-  ![System Flow](docs/System_flow.png)
-------------------------------------------------------------------------------
-⚙️ Tech Stack
-Backend
-  ->  Python
-  ->  Reinforcement Learning (Multi-Armed Bandit Learning)
-  ->  ARIMA (Time-Series Forecasting)
-  ->  FastAPI
-  ->  Uvicorn
-  ->  REST APIs
-  ->  JSON/CSV data storage
-  ->  External Data APIs (Alpha Vantage, GNews)
-Frontend
-  ->  React
-  ->  TypeScript
-  ->  Vite
-  ->  Tailwind CSS
-------------------------------------------------------------------------------
-🧩 Features
+```bash
+git clone https://github.com/1xcodes-Swapnil/Data-Intelligence-System.git
+cd DATA_INTELLIGENCE_AGENT
+```
 
-✅ Automated data collection agent
-✅ Market price monitoring
-✅ News sentiment analysis
-✅ Decision intelligence pipeline
-✅ Real-time dashboard visualization
-✅ Modular AI architecture
--------------------------------------------------------------------------------
-🛠️ Setup Instructions
+### 2. Backend
 
-1️⃣ Clone Repository
-    git clone https://github.com/1xcodes-Swapnil/Data-Intelligence-System.git
-    cd DATA_INTELLIGENCE_AGENT
+Create and activate a virtual environment:
 
-🔹 Backend Setup
-2️⃣ Create Virtual Environment
-    Windows
-      python -m venv venv
-      venv\Scripts\activate
+```bash
+python -m venv venv
+```
 
-    Mac/Linux
-      python3 -m venv venv
-      source venv/bin/activate
+**Windows**
 
-3️⃣ Install Dependencies
-    pip install -r requirements.txt
+```bash
+venv\Scripts\activate
+```
 
-4️⃣ Configure API Keys
-    Create a .env file in the project root:
-      ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
-      GNEWS_API_KEY=your_gnews_api_key
+**Mac/Linux**
 
-    Alternatively configure inside config.py:
-      ALPHA_KEY = "your_alpha_vantage_key"
-      GNEWS_KEY = "your_gnews_api_key"
+```bash
+source venv/bin/activate
+```
 
-5️⃣ Verify Intelligence Modules
-    Ensure the following modules exist:
-      -> intelligence/sentiment.py
-      -> intelligence/market.py
-      -> utils/price_fetcher.py
+Install dependencies:
 
-6️⃣ Run Backend Server
-    uvicorn main:app --reload
+```bash
+pip install -r requirements.txt
+```
 
-  Backend runs at:
-    http://localhost:8000
+### 3. Configure API Keys
 
-🔹 Frontend Setup
-7️⃣ Navigate to Frontend
-    cd frontend
+Create `.env`:
 
-8️⃣ Install Dependencies
-    npm install
+```env
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
+GNEWS_API_KEY=your_gnews_api_key
+```
 
-9️⃣ Start Development Server
-    npm run dev
-    
-    You should see:
-    VITE ready
-    Local: http://localhost:8080/
+### 4. Start Backend
 
-🔗 Connect Frontend with Backend
+```bash
+uvicorn main:app --reload
+```
 
-  Ensure backend is running:
-    uvicorn main:app --reload
+Backend:
 
-  Frontend API endpoint:
-    http://localhost:8000/silver/predict
+`http://localhost:8000`
 
-  Update the API base URL inside frontend configuration if required.
+### 5. Start Frontend
 
-📊 Dashboard Access
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-  Open in browser:
-    http://localhost:8080/
+Dashboard:
 
-This launches the Data Intelligence Dashboard UI.
-------------------------------------------------------------------------------
-CONTRIBUTORS :
-SWAPNIL MUKHERJEE ,
-HRIDAY SONAWANE , 
-MINAL DUSANE ,
-ASTHA PATIL
+`http://localhost:8080/`
 
+---
 
-Future Improvements
+## 🔌 API
 
-=>  Multi-agent orchestration
-=>  Real-time streaming pipelines
-=>  ML model optimization
-=>  Cloud deployment (Docker + AWS)
+### Silver Price Prediction
+
+```http
+GET /silver/predict
+```
+
+```text
+http://localhost:8000/silver/predict
+```
+
+FastAPI documentation:
+
+```text
+http://localhost:8000/docs
+```
+
+---
+
+## 👥 Team
+
+**Swapnil Mukherjee** · **Hriday Sonawane** · **Minal Dusane** · **Astha Patil**
+
+---
+
+<p align="center">
+  <strong>DATA → INTELLIGENCE → PREDICTION → DECISION</strong>
+</p>
+
+<p align="center">
+  Built for <strong>Hackathon</strong>
+</p>
